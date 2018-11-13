@@ -1,14 +1,24 @@
 package my.example.breadshop.domain;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.*;
+
+@Table(name = "wishlist")
+@Getter
+@Setter
 public class WishList {
-    private Long member_id;
-    private Long product_id;
-    String product_name;
 
+    @Id
     @OneToOne
     @JoinColumn(name = "member_id")
     private Member member;
+
+    @OneToMany
+    @JoinColumn(name = "product_id")
+    private Product product;
+
+    @Column(name = "product_name", length = 255)
+    String productName;
 }

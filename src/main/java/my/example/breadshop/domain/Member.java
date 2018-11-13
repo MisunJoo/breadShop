@@ -8,9 +8,9 @@ import java.util.Set;
 
 @Entity
 @Table(name = "member")
-@Getter
-@Setter
+@Getter @Setter
 public class Member {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -59,5 +59,8 @@ public class Member {
 
     @OneToMany(mappedBy = "member")
     private Set<WishList> wishLists;
+
+    @OneToMany(mappedBy = "member")
+    private Set<MemberCoupon> memberCoupons;
 
 }

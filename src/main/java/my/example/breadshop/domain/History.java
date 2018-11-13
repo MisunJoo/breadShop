@@ -1,16 +1,31 @@
 package my.example.breadshop.domain;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "history")
+@Getter @Setter
 public class History {
-    private Long id; //주문번호
-    private Long user_id;
 
-    @OneToOne
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; //주문번호
+
+    @ManyToOne
     @JoinColumn(name = "member_id")
     private Member member;
 
+    @OneToOne(mappedBy = "history")
+    private Shipping shipping;
+
+    @OneToOne(mappedBy = "history")
+    private Payment payment;
+
+    @OneToMany(mappedBy = "history" )
+    private HistoryProduct historyProduct;
 
 }
