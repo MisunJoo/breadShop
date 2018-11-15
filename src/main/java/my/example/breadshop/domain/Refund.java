@@ -12,7 +12,11 @@ import java.util.Date;
 public class Refund {
 
     @Id
-    @OneToOne(mappedBy = "refund")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @OneToOne
+    @JoinColumn(name = "history_product_id") //실제테이블에 어떤 이름으로 들어갈 것인지.
     private HistoryProduct historyProduct;
 
     @Column(name = "refund_check")

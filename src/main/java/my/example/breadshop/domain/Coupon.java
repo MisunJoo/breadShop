@@ -19,6 +19,9 @@ public class Coupon {
     @OneToMany(mappedBy = "coupon")
     private Set<MemberCoupon> memberCoupon;
 
+    @OneToMany(mappedBy = "coupon")
+    private Set<CouponProduct> couponProducts;
+
     @Column(name = "name", length = 20, nullable = false)
     private String name;
 

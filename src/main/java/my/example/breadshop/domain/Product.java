@@ -9,8 +9,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "product")
-@Getter
-@Setter
+@Getter @Setter
 public class Product {
 
     @Id
@@ -20,13 +19,13 @@ public class Product {
     @Column(length = 20, nullable = false)
     private String name;
 
-    @Column(name = "pricate")
+    @Column(name = "price")
     private int price;
 
     @Column(name = "point")
     private int point;
 
-    @Column(name = "nutrient")
+    @Column(name = "nutrient", length = 255)
     private String nutrient;
 
     @Column(name = "cutting")
@@ -44,4 +43,11 @@ public class Product {
 
     @OneToMany(mappedBy = "product")
     private Set<HistoryProduct> historyProducts;
+
+    @ManyToOne
+    @JoinColumn(name = "wishlist_id")
+    private WishList wishList;
+
+    @OneToMany(mappedBy = "product")
+    private Set<CouponProduct> couponProducts;
 }

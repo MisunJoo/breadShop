@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+@Entity
 @Table(name = "history_product")
 @Getter @Setter
 public class HistoryProduct {
@@ -12,6 +13,9 @@ public class HistoryProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "refund_check")
+    private boolean refundCheck = false;
 
     @ManyToOne
     @JoinColumn(name = "history_id")
@@ -25,6 +29,4 @@ public class HistoryProduct {
     @OneToOne(mappedBy = "historyProduct")
     private Refund refund;
 
-    @Column(name = "refund_check")
-    private boolean refundCheck = false;
 }

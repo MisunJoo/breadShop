@@ -8,12 +8,14 @@ import java.util.Date;
 
 @Entity
 @Table(name = "shipping")
-@Getter
-@Setter
+@Getter @Setter
 public class Shipping {
 
     //구매내역 id
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @OneToOne
     @JoinColumn(name = "history_id")
     History history;

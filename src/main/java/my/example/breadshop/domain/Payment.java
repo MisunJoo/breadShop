@@ -10,7 +10,11 @@ import java.util.Date;
 @Table(name = "payment")
 @Getter @Setter
 public class Payment {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @OneToOne
     @JoinColumn(name = "history_id")
     private History history;
