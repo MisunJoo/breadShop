@@ -7,9 +7,9 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "wishlist")
+@Table(name = "wish")
 @Getter @Setter
-public class WishList {
+public class Wish {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +19,7 @@ public class WishList {
     @JoinColumn(name = "member_id")
     private Member member;
 
-    @OneToMany(mappedBy = "wishList")
+    @OneToMany(mappedBy = "wish")
     private Set<Product> products;
 
     @Column(name = "product_name", length = 255)

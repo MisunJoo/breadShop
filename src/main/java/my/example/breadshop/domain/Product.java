@@ -45,8 +45,8 @@ public class Product {
     private Set<HistoryProduct> historyProducts;
 
     @ManyToOne
-    @JoinColumn(name = "wishlist_id")
-    private WishList wishList;
+    @JoinColumn(name = "wish_id")
+    private Wish wish;
 
     @OneToMany(mappedBy = "product")
     private Set<CouponProduct> couponProducts;

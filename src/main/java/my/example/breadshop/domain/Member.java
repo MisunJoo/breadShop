@@ -58,7 +58,7 @@ public class Member {
     private Set<History> histories;
 
     @OneToMany(mappedBy = "member")
-    private Set<WishList> wishLists;
+    private Set<Wish> wishLists;
 
     @OneToMany(mappedBy = "member")
     private Set<MemberCoupon> memberCoupons;
