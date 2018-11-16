@@ -6,27 +6,29 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "history_product")
+@Table(name = "purchase_product")
 @Getter @Setter
-public class HistoryProduct {
+public class PurchaseProduct {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "refund_check")
-    private boolean refundCheck = false;
+    //환불여부 칼럼
+    @Column(name = "refund_check", columnDefinition = "boolean default false")
+    private boolean refundCheck;
+
+    @Column(name = "origin_price")
+    private int originPrice;
 
     @ManyToOne
     @JoinColumn(name = "history_id")
-    private History history;
+    private PurchaseRecord purchaseRecord;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
 
-    //환불여부 칼럼
-    @OneToOne(mappedBy = "historyProduct")
+    @OneToOne(mappedBy = "purchaseProduct")
     private Refund refund;
-
 }

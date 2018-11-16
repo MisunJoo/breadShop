@@ -15,11 +15,14 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="classification1")
-    private String classification1;
+    @Column(name="name", nullable = false)
+    private String name;
 
-    @Column(name="classification2")
-    private String classification2;
+    @Column(name="parent_id", columnDefinition = "int default 0")
+    private int parentId;
+
+    @Column(name = "ordering")
+    private int ordering;
 
     @OneToMany(mappedBy = "category")
     protected Set<Product> products;

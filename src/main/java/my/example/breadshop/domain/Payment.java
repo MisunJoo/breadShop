@@ -17,7 +17,7 @@ public class Payment {
 
     @OneToOne
     @JoinColumn(name = "history_id")
-    private History history;
+    private PurchaseRecord purchaseRecord;
 
     @Column(name = "pay_by", nullable = false)
     private String payBy; //결제방식 : 신용카드, 무통장입금, 카카오페이

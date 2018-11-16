@@ -16,8 +16,8 @@ public class Refund {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "history_product_id") //실제테이블에 어떤 이름으로 들어갈 것인지.
-    private HistoryProduct historyProduct;
+    @JoinColumn(name = "purchase_product_id") //실제테이블에 어떤 이름으로 들어갈 것인지.
+    private PurchaseProduct purchaseProduct;
 
     @Column(name = "refund_check")
     private boolean refundCheck; //환불여부 체크

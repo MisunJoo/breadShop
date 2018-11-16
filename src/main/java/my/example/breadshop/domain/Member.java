@@ -19,13 +19,13 @@ public class Member {
     private String name;
 
     @Column(length = 20, nullable = false, unique = true)
-    private String member_id;
+    private String memberId;
 
     @Column(length = 20, nullable = false)
     private String password;
 
     @Column(nullable = false)
-    private String gender; // 본인의 성별 입
+    private String gender; // 본인의 성별 입력
 
     @Column(length = 255, nullable = false, unique = true)
     private String email;
@@ -43,7 +43,7 @@ public class Member {
     private String addressDetail;
 
     @Column(nullable = false)
-    private boolean receivceEmail;
+    private boolean receiveEmail;
 
     @Column(nullable = false)
     private boolean receiveSMS;
@@ -52,15 +52,21 @@ public class Member {
     private int point = 0;
 
     @OneToMany(mappedBy = "member")
-    private Set<Cart> carts;
+    private Set<CartProduct> cartProducts;
 
     @OneToMany(mappedBy = "member")
-    private Set<History> histories;
+    private Set<PurchaseRecord> purchaseRecords;
 
-    @OneToMany(mappedBy = "member")
-    private Set<Wish> wishLists;
+    @ManyToMany
+    @JoinTable(name = "wish_product",
+            joinColumns = @JoinColumn(name = "member_id", referencedColumnName = "id",nullable = false) ,
+            inverseJoinColumns = @JoinColumn(name = "product_id", referencedColumnName = "id",nullable = false) )
+    private Set<Product> wishProducts;
 
-    @OneToMany(mappedBy = "member")
-    private Set<MemberCoupon> memberCoupons;
+    @ManyToMany
+    @JoinTable(name = "member_coupon",
+            joinColumns = @JoinColumn(name = "member_id", referencedColumnName = "id", nullable = false),
+            inverseJoinColumns = @JoinColumn(name = "coupon_id", referencedColumnName = "id", nullable = false))
+    private Set<Coupon> coupons;
 
 }

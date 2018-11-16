@@ -8,9 +8,9 @@ import java.util.Set;
 
 
 @Entity
-@Table(name = "history")
+@Table(name = "purchase_record")
 @Getter @Setter
-public class History {
+public class PurchaseRecord {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,13 +20,13 @@ public class History {
     @JoinColumn(name = "member_id")
     private Member member;
 
-    @OneToOne(mappedBy = "history")
+    @OneToOne(mappedBy = "purchaseRecord")
     private Shipping shipping;
 
-    @OneToOne(mappedBy = "history")
+    @OneToOne(mappedBy = "purchaseRecord")
     private Payment payment;
 
-    @OneToMany(mappedBy = "history" )
-    private Set<HistoryProduct> historyProducts;
+    @OneToMany(mappedBy = "purchaseRecord" )
+    private Set<PurchaseProduct> purchaseProducts;
 
 }

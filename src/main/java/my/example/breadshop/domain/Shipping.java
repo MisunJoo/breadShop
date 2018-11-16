@@ -11,14 +11,13 @@ import java.util.Date;
 @Getter @Setter
 public class Shipping {
 
-    //구매내역 id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @OneToOne
     @JoinColumn(name = "history_id")
-    History history;
+    PurchaseRecord purchaseRecord;
 
     @Column(name = "receive_name", length = 20)
     private String receiveName;
@@ -40,7 +39,4 @@ public class Shipping {
 
     @Column(name="receive_date", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date receiveDate;
-
-
-
 }

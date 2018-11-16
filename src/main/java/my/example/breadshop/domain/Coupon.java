@@ -16,12 +16,6 @@ public class Coupon {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "coupon")
-    private Set<MemberCoupon> memberCoupon;
-
-    @OneToMany(mappedBy = "coupon")
-    private Set<CouponProduct> couponProducts;
-
     @Column(name = "name", length = 20, nullable = false)
     private String name;
 
@@ -30,4 +24,14 @@ public class Coupon {
 
     @Column(name="rate")
     private Double rate;
+
+    //쿠폰의 총 개스ㅜ
+    @Column(name = "total_num")
+    private int totalNum;
+
+    @ManyToMany
+    @JoinTable(name = "coupon_product",
+            joinColumns = @JoinColumn(name = "coupon_id", referencedColumnName = "id",nullable = false) ,
+            inverseJoinColumns = @JoinColumn(name = "product_id", referencedColumnName = "id",nullable = false) )
+    private Set<Product> CouponProducts;
 }

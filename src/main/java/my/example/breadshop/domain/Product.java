@@ -42,12 +42,5 @@ public class Product {
     private Category category;
 
     @OneToMany(mappedBy = "product")
-    private Set<HistoryProduct> historyProducts;
-
-    @ManyToOne
-    @JoinColumn(name = "wish_id")
-    private Wish wish;
-
-    @OneToMany(mappedBy = "product")
-    private Set<CouponProduct> couponProducts;
+    private Set<PurchaseProduct> purchaseProducts;
 }
