@@ -16,8 +16,11 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 20, nullable = false)
+    @Column(name = "name", length = 255, nullable = false)
     private String name;
+
+    @Column(name = "detail", length = 255)
+    private String detail;
 
     @Column(name = "price")
     private int price;
@@ -25,8 +28,14 @@ public class Product {
     @Column(name = "point")
     private int point;
 
-    @Column(name = "nutrient", length = 255)
-    private String nutrient;
+    @Column(name = "nutrition", length = 255)
+    private String nutrition;
+
+    @Column(name = "hit", columnDefinition = "integer default 0")
+    private int hit;
+
+    @Column(name = "deleted", columnDefinition = "bit default 0")
+    private boolean deleted;
 
     @Column(name = "cutting")
     private boolean cutting;
@@ -34,8 +43,11 @@ public class Product {
     @Column(name = "stock")
     private int stock;
 
-    @Column(name="regDate", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    @Column(name="reg_date", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date regDate;
+
+    @Column(name="update_date", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private Date updateDate;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
@@ -43,4 +55,8 @@ public class Product {
 
     @OneToMany(mappedBy = "product")
     private Set<PurchaseProduct> purchaseProducts;
+
+    @OneToMany
+    @JoinColumn(name = "product_id")
+    private Set<ProductFile> productFiles;
 }

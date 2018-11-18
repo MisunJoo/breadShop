@@ -16,7 +16,7 @@ public class Shipping {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "history_id")
+    @JoinColumn(name = "purchase_record_id")
     PurchaseRecord purchaseRecord;
 
     @Column(name = "receive_name", length = 20)
@@ -37,6 +37,6 @@ public class Shipping {
     @Column(name = "status", length = 20)
     private String status; //출고준비, 배송중, 배송완료
 
-    @Column(name="receive_date", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    @Column(name="receive_date")
     private Date receiveDate;
 }

@@ -16,7 +16,7 @@ public class Payment {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "history_id")
+    @JoinColumn(name = "purchase_record_id")
     private PurchaseRecord purchaseRecord;
 
     @Column(name = "pay_by", nullable = false)
@@ -25,7 +25,7 @@ public class Payment {
     @Column(name = "price", nullable = false)
     private int price;
 
-    @Column(name="pay_date", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    @Column(name="pay_date", nullable = true)
     private Date payDate; //결제한 날짜
 
     @Column(name = "deposit")

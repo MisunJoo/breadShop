@@ -27,4 +27,11 @@ public class Refund {
 
     @Column(name="refund_date", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date refundDate;
+
+    //구매당시 가격의 snapshot.
+    //그러나 refund 테이블의 Row는 항상 생성되는 것이아니다.
+    //purchase_product의 origin_price를 읽어오면 되는데
+    //관계를 어떻게 설정해줘야 하는가?
+    @Column(name = "origin_price")
+    private int originPrice;
 }

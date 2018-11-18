@@ -25,7 +25,7 @@ public class Coupon {
     @Column(name="rate")
     private Double rate;
 
-    //쿠폰의 총 개스ㅜ
+    //쿠폰의 총 개수
     @Column(name = "total_num")
     private int totalNum;
 

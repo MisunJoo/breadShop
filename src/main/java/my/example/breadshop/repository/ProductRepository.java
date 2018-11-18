@@ -11,5 +11,5 @@ public interface ProductRepository extends CrudRepository<Product, Long> {
     List<Product> findByName(String name);
 
     // Spring Data JPA method query
-    Page<Product> findByNameContaining
+    //Page<Product> findByNameContaining
 }

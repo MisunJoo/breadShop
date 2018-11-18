@@ -18,11 +18,12 @@ public class PurchaseProduct {
     @Column(name = "refund_check", columnDefinition = "boolean default false")
     private boolean refundCheck;
 
+    //구매당시 상품 가격의 snapshot
     @Column(name = "origin_price")
     private int originPrice;
 
     @ManyToOne
-    @JoinColumn(name = "history_id")
+    @JoinColumn(name = "purchase_record_id")
     private PurchaseRecord purchaseRecord;
 
     @ManyToOne
