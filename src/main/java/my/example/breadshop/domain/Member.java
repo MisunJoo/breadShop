@@ -69,4 +69,11 @@ public class Member {
             inverseJoinColumns = @JoinColumn(name = "coupon_id", referencedColumnName = "id", nullable = false))
     private Set<Coupon> coupons;
 
+    @ManyToMany
+    @JoinTable(name = "member_role",
+            joinColumns = @JoinColumn(name = "member_id", referencedColumnName = "id", nullable = false),
+            inverseJoinColumns = @JoinColumn (name = "role_id", referencedColumnName = "id", nullable = false))
+    private Set<Role> roles;
+
+
 }

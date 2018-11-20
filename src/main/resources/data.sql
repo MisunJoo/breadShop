@@ -109,3 +109,23 @@ VALUES (2, '우체국택배', '2345-6789', '부산', '2018-10-12 12:05:44', '홍
 --환불 추가
 INSERT INTO refund (id, reason, refund_check, refund_date, purchase_product_id, origin_price)
 VALUES (1, '사이즈안맞음', true, '2018-12-30 23:14:03', 2, 13500);
+
+-- 역할 추가
+INSERT INTO role(id, name)
+VALUES (1, '관리자');
+
+INSERT INTO role(id, name)
+VALUES (2, '회원');
+
+INSERT INTO role(id, name)
+VALUES (3, '매니저');
+
+-- 멤버의 역할 추가
+INSERT INTO member_role (member_id, role_id)
+VALUES (1, 1);
+
+INSERT INTO member_role (member_id, role_id)
+VALUES (2, 2);
+
+INSERT INTO member_role (member_id, role_id)
+VALUES (2, 3);

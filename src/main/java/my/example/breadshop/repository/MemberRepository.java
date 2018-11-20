@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface MemberRepository extends JpaRepository<Member, Long> {
-    @Query("")
-    public Member getMember(@Param("member_id") String memberId);
+    @Query("SELECT m FROM Member m JOIN fetch m.roles WHERE m.id = :id ")
+    public Member getMember(@Param("id") String memberId);
 
 }
