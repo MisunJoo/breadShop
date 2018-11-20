@@ -11,46 +11,46 @@ VALUES (3, '밀빵', 0, 3);
 
 -- 상품 추가 (호밀빵)
 INSERT INTO product (id, cutting, deleted, detail, hit, name, nutrition, point, price, reg_date, stock, update_date, category_id)
-VALUES (1, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '65% 호두 호밀빵', '중량 : 약260g 100g당 열량 : 222kcal', 50, 6400, now(), 20, now(), 1);
+VALUES (1, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '65% 호두 호밀빵', '중량 : 약260g 100g당 열량 : 222kcal', 50, 6400, '2018-10-11 12:05:44', 20, '2018-10-11 12:05:44', 1);
 
 INSERT INTO product (id, cutting, deleted, detail, hit, name, nutrition, point, price, reg_date, stock, update_date, category_id)
-VALUES (2, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '35% 호두 호밀빵', '중량 : 약260g 100g당 열량 : 222kcal', 50, 6400, now(), 20, now(), 1);
+VALUES (2, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '35% 호두 호밀빵', '중량 : 약260g 100g당 열량 : 222kcal', 50, 6400, '2018-10-12 12:05:44', 20, '2018-10-12 12:05:44', 1);
 
 INSERT INTO product (id, cutting, deleted, detail, hit, name, nutrition, point, price, reg_date, stock, update_date, category_id)
-VALUES (3, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '65% 자연발효 호밀빵', '중량 : 약480g 100g당 열량 : 209kcal', 50, 9200, now(), 20, now(), 1);
+VALUES (3, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '65% 자연발효 호밀빵', '중량 : 약480g 100g당 열량 : 209kcal', 50, 9200, '2018-10-13 12:05:44', 20, '2018-10-13 12:05:44', 1);
 
 
 -- 상품 추가 (통밀빵)
 INSERT INTO product (id, cutting, deleted, detail, hit, name, nutrition, point, price, reg_date, stock, update_date, category_id)
-VALUES (4, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '100% 검은콩 통밀 베이글 (8개 한세트)', '중량 : 1개당 약80g 8개 한세트 1개당 열량 : 174kcal', 50, 13500, now(), 20, now(), 2);
+VALUES (4, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '100% 검은콩 통밀 베이글', '중량 : 1개당 약80g 8개 한세트 1개당 열량 : 174kcal', 50, 13500, '2018-10-14 12:05:44', 20, '2018-10-14 12:05:44', 2);
 
 INSERT INTO product (id, cutting, deleted, detail, hit, name, nutrition, point, price, reg_date, stock, update_date, category_id)
-VALUES (5, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '35% 무화과 통밀빵', '중량 : 약300g 100g당 열량 : 218kcal', 50, 6200, now(), 20, now(), 2);
+VALUES (5, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '35% 무화과 통밀빵', '중량 : 약300g 100g당 열량 : 218kcal', 50, 6200, '2018-10-15 12:05:44', 20, '2018-10-15 12:05:44', 2);
 
 INSERT INTO product (id, cutting, deleted, detail, hit, name, nutrition, point, price, reg_date, stock, update_date, category_id)
-VALUES (6, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '35% 치즈 통밀빵', '중량 : 약300g 100g당 열량 : 230kcal', 50, 6200, now(), 20, now(), 2);
+VALUES (6, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '35% 치즈 통밀빵', '중량 : 약300g 100g당 열량 : 230kcal', 50, 6200, '2018-10-16 12:05:44', 20, '2018-10-16 12:05:44', 2);
 
 
 -- 상품 추가 (밀빵)
 INSERT INTO product (id, cutting, deleted, detail, hit, name, nutrition, point, price, reg_date, stock, update_date, category_id)
-VALUES (7, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '크랜베리 스콘', '중량 : 약70g 100g당 열량 : 260kcal', 50, 2900, now(), 20, now(), 3);
+VALUES (7, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '크랜베리 스콘', '중량 : 약70g 100g당 열량 : 260kcal', 50, 2900, '2018-10-17 12:05:44', 20, '2018-10-17 12:05:44', 3);
 
 INSERT INTO product (id, cutting, deleted, detail, hit, name, nutrition, point, price, reg_date, stock, update_date, category_id)
-VALUES (8, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '시나몬 식빵', '중량 : 약490g 100g당 열량 : 236kcal', 50, 6200, now(), 20, now(), 3);
+VALUES (8, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '시나몬 식빵', '중량 : 약490g 100g당 열량 : 236kcal', 50, 6200, '2018-10-18 12:05:44', 20, '2018-10-18 12:05:44', 3);
 
 INSERT INTO product (id, cutting, deleted, detail, hit, name, nutrition, point, price, reg_date, stock, update_date, category_id)
-VALUES (9, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '생크림 스콘', '중량 : 약70g 100g당 열량 : 273kcal', 50, 2600, now(), 20, now(), 3);
+VALUES (9, false, false, '트랜스지방 제로, 저칼로리(저GI)', 0, '생크림 스콘', '중량 : 약70g 100g당 열량 : 273kcal', 50, 2600, '2018-10-19 12:05:44', 20, '2018-10-19 12:05:44', 3);
 
 
 --멤버 추가
 INSERT INTO member (id, address, address_detail, email, gender, member_id, name, password, phone, point, receive_email, receive_sms, zipcode)
-VALUES (1, '관리자 주소', '관리자 상세 주소', 'webmaster@naver.com', '없음', 'webmaster', 'admin', '1234', '01011111111', 0, false, false, '123-45');
+VALUES (1, '관리자 주소', '관리자 상세 주소', 'webmaster@naver.com', '없음', 'webmaster', 'admin', '{bcrypt}$2a$10$VN7c3s7EevNi/FlXJcQ2GOiPKL7g6UGkjJT7W/AnkmtJXWSCrJi.C', '01011111111', 0, false, false, '123-45');
 
 INSERT INTO member (id, address, address_detail, email, gender, member_id, name, password, phone, point, receive_email, receive_sms, zipcode)
-VALUES (2, '한국', '비밀임', '0987someday@naver.com', '여성', '0987someday', '주미선', '1234', '01022222222', 0, true, true, '234-56');
+VALUES (2, '한국', '비밀임', '0987someday@naver.com', '여성', '0987someday', '주미선', '{bcrypt}$2a$10$zPMvOYErmuRa0vYLz3V0u.lkf35ViH5yyQtN4Lm6dgT4O8zGWR4Ki', '01022222222', 0, true, true, '234-56');
 
 INSERT INTO member (id, address, address_detail, email, gender, member_id, name, password, phone, point, receive_email, receive_sms, zipcode)
-VALUES (3, '한국', '부산광역시', 'number3@naver.com', '남성', 'ibusanyou', '홍길동', '1234', '01033333333', 0, true, true, '345-67');
+VALUES (3, '한국', '부산광역시', 'number3@naver.com', '남성', 'ibusanyou', '홍길동', '{bcrypt}$2a$10$9m8jlI2i3hV3itZGoI4KJexA038OblQA85f4ztkdCeTxKG5qWqCie', '01033333333', 0, true, true, '345-67');
 
 
 --쿠폰 추가
@@ -100,10 +100,10 @@ VALUES (2, false, '무통장입금', NULL, 8100, 2);
 
 --배송 추가
 INSERT INTO shipping (id, company, invoice, receive_address, receive_date, receive_name, receive_phone, status, purchase_record_id)
-VALUES (1, '우체국택배', '1234-5678', '서울', now(), '주미선', '01022222222', '배송완료', 1);
+VALUES (1, '우체국택배', '1234-5678', '서울', '2018-10-11 12:05:44', '주미선', '01022222222', '배송완료', 1);
 
 INSERT INTO shipping (id, company, invoice, receive_address, receive_date, receive_name, receive_phone, status, purchase_record_id)
-VALUES (2, '우체국택배', '2345-6789', '부산', now(), '홍길동', '01033333333', '배송중', 2);
+VALUES (2, '우체국택배', '2345-6789', '부산', '2018-10-12 12:05:44', '홍길동', '01033333333', '배송중', 2);
 
 
 --환불 추가

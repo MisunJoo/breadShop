@@ -16,10 +16,10 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", length = 255, nullable = false)
+    @Column(name = "name", length = 20, nullable = false)
     private String name;
 
-    @Column(name = "detail", length = 255)
+    @Column(name = "detail", length = 20)
     private String detail;
 
     @Column(name = "price")
@@ -28,7 +28,7 @@ public class Product {
     @Column(name = "point")
     private int point;
 
-    @Column(name = "nutrition", length = 255)
+    @Column(name = "nutrition", length = 50)
     private String nutrition;
 
     @Column(name = "hit", columnDefinition = "integer default 0")
@@ -43,10 +43,10 @@ public class Product {
     @Column(name = "stock")
     private int stock;
 
-    @Column(name="reg_date", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    @Column(name="reg_date")
     private Date regDate;
 
-    @Column(name="update_date", columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    @Column(name="update_date")
     private Date updateDate;
 
     @ManyToOne

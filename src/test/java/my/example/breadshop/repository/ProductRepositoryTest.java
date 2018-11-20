@@ -58,4 +58,17 @@ public class ProductRepositoryTest {
         }
     }
 
+    @Test
+    public void 상품을_수정된_날짜의_내림차순으로_조회() throws Exception{
+        Pageable pageable = PageRequest.of(0, 4);
+        Page<Product> products = productRepository.findAllByOrderByUpdateDateDesc(pageable);
+
+        System.out.println("총 개수" + products.getTotalElements());
+        System.out.println("총 페이지" + products.getTotalPages());
+
+        for(Product product : products){
+            System.out.println(product.getName());
+        }
+    }
+
 }
