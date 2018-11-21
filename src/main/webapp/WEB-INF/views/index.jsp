@@ -5,5 +5,6 @@
     <title>index</title>
 </head>
 <body>
+인덱스페이지입니다.
 </body>
 </html>

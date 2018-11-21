@@ -7,8 +7,9 @@ import javax.persistence.Column;
 
 @Controller
 public class MainController {
+
     @GetMapping("/")
     public String main(){
-        return "index.jsp";
+        return "index";
     }
 }
