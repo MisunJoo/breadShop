@@ -11,8 +11,13 @@
 
 
 <c:forEach begin="1" end="${pageCount}" step="1" var="start">
-    <a href="/product/list?start=${start-1}"><b>${start}</b></a>
+    <a href="/products/list?start=${start-1}&keyword=${keyword}"><b>${start}</b></a>
 </c:forEach>
+
+<form method="post" action="/products/list">
+    <input type="text" name="keyword"><br>
+    <button type="submit">검색 : </button>
+</form>
 
 
 </body>
